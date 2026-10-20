@@ -1,20 +1,23 @@
 import { Component } from '@angular/core';
-import { Numbers } from './numbers/numbers';
-import { Text } from './text/text';
-import { Products } from './products/products';
-import { Giants } from './giants/giants';
+import { ActiveButtons } from './active-buttons/active-buttons';
+import { Orders } from './orders/orders';
+import { Status } from './status/status';
+import { Master } from './master-detail/master';
+import { ColorMessageParent } from './color-message/color-message';
 
 @Component({
   selector: 'app-root',
-  imports: [Numbers, Text, Products, Giants],
+  imports: [ActiveButtons, Orders, Status, Master, ColorMessageParent],
   template: `
-    <app-numbers />
+    <app-active-buttons />
     <hr />
-    <app-text />
+    <app-orders />
     <hr />
-    <app-products />
+    <app-status />
     <hr />
-    <app-giants />
+    <app-master />
+    <hr />
+    <app-color-message />
   `,
 })
 export class App {}
